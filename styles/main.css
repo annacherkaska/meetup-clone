@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.konteyner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.header {
+    background-color: #ffffff;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .konteyner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.blok-logo {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 592px;
+    height: 42px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.pole-vvoda {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 12px;
+}
+
+.pole-vvoda:first-child {
+    width: 296px;
+    border-right: 1px solid #d9d9d9;
+}
+
+.pole-vvoda:nth-child(2) {
+    width: 254px;
+}
+
+.vvod-teksta {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-left: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #222222;
+    background: transparent;
+}
+
+.krasnaya-knopka {
+    background-color: #f65858;
+    border: none;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blok-navigacii {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-left: auto;
+}
+
+.yazik-sayta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #222222;
+    cursor: pointer;
+}
+
+.ssilka-vhod {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #222222;
+    text-decoration: none;
+}
+
+.knopka-registracii {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #008294;
+}
+
+.picture-logo {
+    height: 34px;
+    display: block;
+}
+
+.picture-lupa {
+    width: 22px;
+    height: 22px;
+}
+
+.lupa-v-knopke {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+
+.picture-planeti {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.hero {
+    background-color: #ffffff;
+    padding: 40px 0 80px 0;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 48px;
+}
+
+.hero-info {
+    max-width: 512px;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    color: #222222;
+    margin-bottom: 24px;
+}
+
+.hero-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #707070;
+    margin-bottom: 32px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #008294;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.hero-media {
+    flex-shrink: 0;
+    width: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
