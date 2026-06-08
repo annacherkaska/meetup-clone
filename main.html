@@ -11,389 +11,585 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="konteyner">
-            <div class="header-line">
-                <div class="header-left">
-                    <a href="main.html">
-                        <img src="picture/icons/header/logo.svg" alt="Meetup" class="logo">
-                    </a>
-                    <div class="search-box">
-                        <div class="search-input-wrapper">
-                            <img src="picture/icons/header/search.svg" alt="" class="search-icon">
-                            <input type="text" placeholder="Search events">
+<header class="header">
+    <div class="konteyner">
+        <div class="header-line">
+            <div class="header-left">
+                <a href="main.html">
+                    <img src="picture/icons/header/logo.svg" alt="Meetup" class="logo">
+                </a>
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <img src="picture/icons/header/search.svg" alt="" class="search-icon">
+                        <input type="text" placeholder="Search events">
+                    </div>
+                    <div class="location-input-wrapper">
+                        <input type="text" placeholder="Mountain View, CA">
+                    </div>
+                    <button class="search-btn">
+                        <img src="picture/icons/header/search.svg" alt="" class="lupa-v-knopke">
+                    </button>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="language-select">
+                    <img src="picture/icons/header/language.svg" alt="">
+                    <span>English</span>
+                </div>
+                <a href="#" class="btn-login">Log in</a>
+                <a href="#" class="btn-signup">Sign up</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="konteyner">
+        <div class="hero-wrapper">
+            <div class="hero-info">
+                <h1 class="hero-title">The people platform—Where interests become friendships</h1>
+                <p class="hero-text">Whatever your interest, from hiking and reading to networking and skill sharing, there are thousands of people who share it on Meetup. Events are happening every day—sign up to join the fun.</p>
+                <a href="page2.html" class="hero-btn">Join Meetup</a>
+            </div>
+            <div class="hero-media">
+                <img src="picture/pic/glavnaya-velosiped.jpg" alt="" class="hero-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="events">
+    <div class="konteyner">
+        <div class="events-header">
+            <h2 class="events-main-title">
+                Events near
+                <span class="events-location-wrapper">
+                    <span class="events-location">Mountain View, CA</span>
+                    <img src="picture/icons/events%20near/pencil.svg" alt="" class="event-icon-pencil">
+                </span>
+            </h2>
+            <a href="page2.html" class="events-see-all">See all events</a>
+        </div>
+
+        <div class="events-near-grid">
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <img src="picture/pic/near/near_1.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">Day Trading Idea and Strategy</h3>
+                    <p class="event-card-category">Business (5 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">Mon, Mar 18 · 7:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>1 going</span>
                         </div>
-                        <div class="location-input-wrapper">
-                            <input type="text" placeholder="Mountain View, CA">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
                         </div>
-                        <button class="search-btn">
-                            <img src="picture/icons/header/search.svg" alt="" class="lupa-v-knopke">
-                        </button>
                     </div>
                 </div>
-                <div class="header-right">
-                    <div class="language-select">
-                        <img src="picture/icons/header/language.svg" alt="">
-                        <span>English</span>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <img src="picture/pic/near/near_2.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
+                    <p class="event-card-category">Business (25 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">Tue, Mar 19 · 5:00 PM PDT</span>
                     </div>
-                    <a href="#" class="btn-login">Log in</a>
-                    <a href="#" class="btn-signup">Sign up</a>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>41 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <span class="online-badge">Online Event</span>
+                    <img src="picture/pic/near/near_3.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases</h3>
+                    <p class="event-card-category">Technology</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">Wed, Mar 13 · 6:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>40 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <img src="picture/pic/near/near_4.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">INFORMS San Francisco Chapter In-Person Event</h3>
+                    <p class="event-card-category">Health and Wellbeing (50 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">Thu, Mar 28 · 5:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>41 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <img src="picture/pic/near/near_5.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">AI Wednesdays - Meet and Greet!</h3>
+                    <p class="event-card-category">Technology (3 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">WED, MAR 13 · 6:30 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>29 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <span class="online-badge">Online Event</span>
+                    <img src="picture/pic/near/near_6.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">ROS By-The-Bay March 2024</h3>
+                    <p class="event-card-category">Social Activities</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">THU, MAR 21 · 6:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>51 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <img src="picture/pic/near/near_7.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">Free Christian Singles' Dinner</h3>
+                    <p class="event-card-category">Hobbies and Passions (10 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">FRI, MAR 29 · 6:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>11 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <img src="picture/pic/near/near_8.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">In-person: Deep Dive into RAG Architectures (Food served)</h3>
+                    <p class="event-card-category">Hobbies and Passions (50 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">THU, MAR 14 · 5:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>18 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="upcoming-events">
+    <div class="konteyner">
+        <div class="events-header">
+            <h2 class="events-main-title">Upcoming online events</h2>
+            <a href="page2.html" class="events-see-all">See all events</a>
+        </div>
+
+        <div class="online-events-grid">
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <span class="online-badge">Online Event</span>
+                    <img src="picture/pic/online/online_1.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers</h3>
+                    <p class="event-card-category">Business (25 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">THU, MAR 14 · 6:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>3 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <span class="online-badge">Online Event</span>
+                    <img src="picture/pic/online/online_2.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">Vision Pro Developers Online Meetup</h3>
+                    <p class="event-card-category">Technology</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">WED, MAR 13 · 7:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>51 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <span class="online-badge">Online Event</span>
+                    <img src="picture/pic/online/online_3.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">Significant Musical Moments</h3>
+                    <p class="event-card-category">Hobbies and Passions (10 km)</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">WED, MAR 13 · 6:00 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>16 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-card-media">
+                    <span class="online-badge">Online Event</span>
+                    <img src="picture/pic/online/online_4.jpg" alt="" class="event-card-img">
+                </div>
+                <div class="event-card-info">
+                    <h3 class="event-card-title">FREE Webinar: Introduction to Power BI</h3>
+                    <p class="event-card-category">Technology</p>
+                    <div class="event-card-date-row">
+                        <img src="picture/icons/events%20near/calendar.svg" alt="" class="event-icon-meta">
+                        <span class="event-card-date">THU, MAR 14 · 5:30 PM PDT</span>
+                    </div>
+                    <div class="event-card-meta-box">
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/chek%20in.svg" alt="" class="event-icon-meta">
+                            <span>33 going</span>
+                        </div>
+                        <div class="event-meta-row">
+                            <img src="picture/icons/events%20near/ticket.svg" alt="" class="event-icon-meta">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="join-meetup">
+    <div class="konteyner">
+        <div class="join-wrapper">
+            <div class="join-content">
+                <h2 class="join-title">Join Meetup</h2>
+                <p class="join-text">People use Meetup to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together. Membership is free.</p>
+                <a href="#" class="join-btn">Sign up</a>
+            </div>
+            <img src="picture/pic/kartinka-ruki.svg" alt="Join Meetup" class="join-img">
+        </div>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="konteyner">
+        <h2 class="categories-title">Explore top categories</h2>
+        <div class="categories-grid">
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/travel_and_outdoor.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Travel and Outdoor</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/social_activities.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Social Activities</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/hobbies_and_passions.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Hobbies and Passions</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/sports_and_fitness.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Sports and Fitness</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/health_and_wellness.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Health and Wellbeing</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/technology.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Technology</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/art_and_culture.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Art and Culture</span>
+            </a>
+            <a href="#" class="category-card">
+                <img src="picture/icons/top%20categories/games.svg.svg" alt="" class="category-icon">
+                <span class="category-text">Games</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="popular-cities">
+    <div class="konteyner">
+        <h2 class="cities-title">Popular cities on Meetup</h2>
+        <p class="cities-subtitle">Looking for fun things to do near you? See what Meetup organizers are planning in cities around the country.</p>
+        <div class="cities-grid">
+            <div class="city-card">
+                <img src="picture/pic/city/new_york.jpg" alt="New York" class="city-img">
+                <span class="city-name">New York</span>
+            </div>
+            <div class="city-card">
+                <img src="picture/pic/city/san_francisco.jpg" alt="San Francisco" class="city-img">
+                <span class="city-name">San Francisco</span>
+            </div>
+            <div class="city-card">
+                <img src="picture/pic/city/chicago.jpg" alt="Chicago" class="city-img">
+                <span class="city-name">Chicago</span>
+            </div>
+            <div class="city-card">
+                <img src="picture/pic/city/nashville.jpg" alt="Nashville" class="city-img">
+                <span class="city-name">Nashville</span>
+            </div>
+            <div class="city-card">
+                <img src="picture/pic/city/miami.jpg" alt="Miami" class="city-img">
+                <span class="city-name">Miami</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works">
+    <div class="konteyner">
+        <h2 class="how-title">How Meetup works</h2>
+        <div class="works-grid">
+            <div class="work-card">
+                <div class="work-icon-box">
+                    <img src="picture/icons/search.svg" alt="Search" class="work-icon">
+                </div>
+                <div class="work-content">
+                    <h3 class="work-card-title">Discover events and groups</h3>
+                    <p class="work-text">See who's hosting local events for all the things you love.</p>
+                    <a href="#" class="work-link">Search events and groups</a>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="work-icon-box">
+                    <img src="picture/icons/plus.svg" alt="Create" class="work-icon">
+                </div>
+                <div class="work-content">
+                    <h3 class="work-card-title">Start a group to host events</h3>
+                    <p class="work-text">Create your own Meetup group, and draw from a community of millions.</p>
+                    <a href="#" class="work-link">Start a group</a>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section class="hero">
-        <div class="konteyner">
-            <div class="hero-wrapper">
-                <div class="hero-info">
-                    <h1 class="hero-title">The people platform—Where interests become friendships</h1>
-                    <p class="hero-text">Whatever your interest, from hiking and reading to networking and skill sharing, there are thousands of people who share it on Meetup. Events are happening every day—sign up to join the fun.</p>
-                    <a href="page2.html" class="hero-btn">Join Meetup</a>
+<section class="friendships">
+    <div class="konteyner">
+        <h2 class="friendships-title">Friendships are made on Meetup</h2>
+        <p class="friendships-subtitle">Since 2002, members have used Meetup to make new friends, meet like-minded people, spend time on hobbies, and connect with locals over shared interests. Learn how.</p>
+        <div class="friendships-grid">
+            <article class="friend-card">
+                <img src="picture/pic/friendships%20meetup/first_article.jpg" alt="Story" class="friend-img">
+                <h3 class="friend-card-title">I Used Meetup to Make Friends at Brunch</h3>
+                <p class="friend-card-text">New Jersey-based writer and college student
+Brianna Stryker wanted to meet friends in her
+hometown. Learn how she used Meetup to make
+connections by joining a Girls Night Out Meetup
+group.</p>
+                <a href="#" class="friend-link">Read more</a>
+            </article>
+            <article class="friend-card">
+                <img src="picture/pic/friendships%20meetup/second_article.jpg" alt="Story" class="friend-img">
+                <h3 class="friend-card-title">How to Turn Casual Connections into Close Friendships</h3>
+                <p class="friend-card-text">It’s proven that close friendships are harder to
+make as an adult. But don’t sweat it: here’s what
+you can do to simplify the process.</p>
+                <a href="#" class="friend-link">Read more</a>
+            </article>
+            <article class="friend-card">
+                <img src="picture/pic/friendships%20meetup/third_article.jpg" alt="Story" class="friend-img">
+                <h3 class="friend-card-title">Do You Have the "Right" Number of Friends?</h3>
+                <p class="friend-card-text">Studies from around the world have tried to help
+people answer this question. Learn about the
+three tiers of friendship and how to fulfill them.</p>
+                <a href="#" class="friend-link">Read more</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="konteyner">
+        <div class="footer-top">
+            <p class="create-text">Create your own Meetup group.</p>
+            <a href="#" class="get-started-btn">Get Started</a>
+        </div>
+        <hr class="footer-line">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4 class="col-title">Your Account</h4>
+                <a href="#">Sign up</a>
+                <a href="#">Log in</a>
+                <a href="#">Help</a>
+                <a href="#">Become an Affiliate</a>
+            </div>
+            <div class="footer-col">
+                <h4 class="col-title">Discover</h4>
+                <a href="#">Groups</a>
+                <a href="#">Calendar</a>
+                <a href="#">Topics</a>
+                <a href="#">Cities</a>
+                <a href="#">Online Events</a>
+                <a href="#">Local Guides</a>
+                <a href="#">Make Friends</a>
+            </div>
+            <div class="footer-col">
+                <h4 class="col-title">Meetup</h4>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Meetup Pro</a>
+                <a href="#">Careers</a>
+                <a href="#">Apps</a>
+                <a href="#">Podcast</a>
+            </div>
+        </div>
+        <div class="footer-social-row">
+            <h4 class="social-title">Follow us</h4>
+            <div class="social-wrapper">
+                <div class="social-icons">
+                    <img src="picture/icons/footer/Facebook.svg" alt="FB">
+                    <img src="picture/icons/footer/Twitter.svg" alt="TW">
+                    <img src="picture/icons/footer/YouTube.svg" alt="YT">
+                    <img src="picture/icons/footer/Instagram.svg" alt="IG">
+                    <img src="picture/icons/footer/TikTok.svg" alt="TT">
                 </div>
-                <div class="hero-media">
-                    <img src="picture/pic/glavnaya-velosiped.jpg" alt="" class="hero-img">
+                <div class="store-links">
+                    <img src="picture/icons/footer/google.jpg" alt="Google">
+                    <img src="picture/icons/footer/ios.jpg" alt="Apple">
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="events">
-        <div class="konteyner">
-            <div class="events-header">
-                <h2 class="events-main-title">
-                    Events near
-                    <span class="events-location-wrapper">
-                        <span class="events-location">Mountain View, CA</span>
-                        <img src="picture/icons/events near/pencil.svg" alt="" class="event-icon-pencil">
-                    </span>
-                </h2>
-                <a href="page2.html" class="events-see-all">See all events</a>
-            </div>
-
-            <div class="events-near-grid">
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_1.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">Day Trading Idea and Strategy</h3>
-                        <p class="event-card-category">Business (5 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">Mon, Mar 18 · 7:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>1 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_2.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">Let's Talk Networking: JPMorgan Chase in Palo Alto</h3>
-                        <p class="event-card-category">Business (25 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">Tue, Mar 19 · 5:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>41 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_3.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases</h3>
-                        <p class="event-card-category">Technology</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">Wed, Mar 13 · 6:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>40 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_4.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">INFORMS San Francisco Chapter In-Person Event</h3>
-                        <p class="event-card-category">Health and Wellbeing (50 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">Thu, Mar 28 · 5:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>41 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_5.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">AI Wednesdays - Meet and Greet!</h3>
-                        <p class="event-card-category">Technology (3 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">WED, MAR 13 · 6:30 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>29 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_6.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">ROS By-The-Bay March 2024</h3>
-                        <p class="event-card-category">Social Activities</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">THU, MAR 21 · 6:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>51 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_7.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">Free Christian Singles' Dinner</h3>
-                        <p class="event-card-category">Hobbies and Passions (10 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">FRI, MAR 29 · 6:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>11 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <img src="picture/pic/near/near_8.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">In-person: Deep Dive into RAG Architectures (Food served)</h3>
-                        <p class="event-card-category">Hobbies and Passions (50 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">THU, MAR 14 · 5:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>18 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="footer-bottom">
+            <span>© 2026 Meetup</span>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Do Not Sell or Share My Personal Data</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Help</a>
         </div>
-    </section>
-
-    <section class="upcoming-events">
-        <div class="konteyner">
-            <div class="events-header">
-                <h2 class="events-main-title">Upcoming online events</h2>
-                <a href="page2.html" class="events-see-all">See all events</a>
-            </div>
-
-            <div class="online-events-grid">
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <span class="online-badge">Online Event</span>
-                        <img src="picture/pic/online/online_1.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers</h3>
-                        <p class="event-card-category">Business (25 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">THU, MAR 14 · 6:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>3 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <span class="online-badge">Online Event</span>
-                        <img src="picture/pic/online/online_2.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">Vision Pro Developers Online Meetup</h3>
-                        <p class="event-card-category">Technology</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">WED, MAR 13 · 7:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>51 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <span class="online-badge">Online Event</span>
-                        <img src="picture/pic/online/online_3.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">Significant Musical Moments</h3>
-                        <p class="event-card-category">Hobbies and Passions (10 km)</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">WED, MAR 13 · 6:00 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>16 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-card-media">
-                        <span class="online-badge">Online Event</span>
-                        <img src="picture/pic/online/online_4.jpg" alt="" class="event-card-img">
-                    </div>
-                    <div class="event-card-info">
-                        <h3 class="event-card-title">FREE Webinar: Introduction to Power BI</h3>
-                        <p class="event-card-category">Technology</p>
-                        <div class="event-card-date-row">
-                            <img src="picture/icons/events near/data.svg" alt="" class="event-icon-meta">
-                            <span class="event-card-date">THU, MAR 14 · 5:30 PM PDT</span>
-                        </div>
-                        <div class="event-card-meta-box">
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/check.svg" alt="" class="event-icon-meta">
-                                <span>33 going</span>
-                            </div>
-                            <div class="event-meta-row">
-                                <img src="picture/icons/events near/ticket.svg" alt="" class="event-icon-meta">
-                                <span>Free</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="join-meetup">
-        <div class="konteyner">
-            <div class="join-wrapper">
-                <div class="join-content">
-                    <h2 class="join-title">Join Meetup</h2>
-                    <p class="join-text">People use Meetup to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together. Membership is free.</p>
-                    <a href="#" class="join-btn">Sign up</a>
-                </div>
-                <img src="picture/pic/kartinka-ruki.svg" alt="Join Meetup" class="join-img">
-            </div>
-        </div>
-    </section>
+    </div>
+</footer>
 
 </body>
 </html>

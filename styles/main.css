@@ -17,7 +17,6 @@ body {
     width: 100%;
 }
 
-/* HEADER */
 .header {
     width: 100%;
     padding: 12px 0;
@@ -136,7 +135,6 @@ body {
     border-radius: 8px;
 }
 
-/* HERO */
 .hero {
     background-color: #ffffff;
     padding: 71px 0 0 0;
@@ -195,7 +193,6 @@ body {
     display: block;
 }
 
-/* EVENTS NEAR */
 .events {
     background-color: #ffffff;
     padding-top: 130px;
@@ -260,7 +257,6 @@ body {
     width: 100%;
 }
 
-/* EVENT CARD */
 .event-card {
     display: flex;
     flex-direction: column;
@@ -302,7 +298,7 @@ body {
     margin-bottom: 8px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
@@ -351,7 +347,6 @@ body {
     margin-right: 16px;
 }
 
-/* UPCOMING ONLINE EVENTS */
 .upcoming-events {
     background-color: #ffffff;
     padding-top: 40px;
@@ -392,7 +387,6 @@ body {
     background-position: center;
 }
 
-/* JOIN MEETUP */
 .join-meetup {
     background-color: rgba(151, 202, 209, 0.08);
     margin: 60px auto;
@@ -448,4 +442,315 @@ body {
     height: auto;
     flex-shrink: 0;
     object-fit: contain;
+}
+
+.categories {
+    padding: 64px 0 0 0;
+}
+
+.categories-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 28px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+}
+
+.category-card {
+    width: 135px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(151, 202, 209, 0.08);
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    color: #212121;
+    transition: background-color 0.3s;
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.category-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 22px;
+    margin-bottom: 6px;
+}
+
+.category-text {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.popular-cities {
+    padding: 64px 0;
+}
+
+.cities-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 16px;
+}
+
+.cities-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 28px;
+}
+
+.cities-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+}
+
+.city-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city-img {
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+.city-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #212121;
+    text-align: center;
+}
+
+.how-it-works {
+    padding: 64px 0;
+}
+
+.how-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 24px;
+}
+
+.works-grid {
+    display: flex;
+    gap: 32px;
+}
+
+.work-card {
+    width: 580px;
+    height: 180px;
+    background-color: rgba(151, 202, 209, 0.08);
+    border-radius: 8px;
+    display: flex;
+    padding: 32px 25px;
+}
+
+.work-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.work-content {
+    margin-left: 24px;
+}
+
+.work-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 16px;
+}
+
+.work-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 16px;
+}
+
+.work-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #00798a;
+    text-decoration: none;
+}
+
+.friendships {
+    padding: 64px 0 55px 0;
+}
+
+.friendships-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 16px;
+}
+
+.friendships-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 28px;
+    max-width: 800px;
+}
+
+.friendships-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.friend-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-img {
+    width: 376px;
+    height: 191px;
+    object-fit: cover;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.friend-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.friend-card-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 16px;
+}
+
+.friend-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #00798a;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #212121;
+    color: #f6f7f8;
+    padding-top: 34px;
+    padding-bottom: 30px;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.create-text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.get-started-btn {
+    width: 120px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f6f7f8;
+    border-radius: 6px;
+    color: #f6f7f8;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #707070;
+    margin-bottom: 50px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 270px;
+    margin-bottom: 50px;
+}
+
+.col-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    display: block;
+    color: #c5c4c4;
+    text-decoration: none;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.footer-social-row {
+    margin-bottom: 30px;
+}
+
+.social-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.social-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 32px;
+}
+
+.social-icons img {
+    width: 30px;
+}
+
+.store-links {
+    display: flex;
+    gap: 22px;
+    margin-left: 550px;
+}
+
+.footer-bottom {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: #c5c4c4;
+    padding-top: 24px;
+}
+
+.footer-bottom a {
+    color: #c5c4c4;
+    text-decoration: none;
 }
