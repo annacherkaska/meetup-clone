@@ -1,449 +1,71 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events near New York, NY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/page2.css">
+</head>
+<body>
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
-    color: #222222;
-}
+    <div id="mesto-dlya-shapki"></div>
 
-.konteyner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 100%;
-}
+    <main>
+        <div class="konteyner">
 
-/* HEADER */
-.header {
-    width: 100%;
-    padding: 12px 0;
-    background-color: #ffffff;
-}
+            <h1 class="page-main-title">Events near New York, NY</h1>
+            <p class="page-subtitle">Events</p>
+            <div class="blue-line"></div>
 
-.header-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 42px;
-}
+            <div class="filters-row">
+                <button class="filter-chip" id="filterType">
+                    <span>Any type</span>
+                    <img src="picture/pic/page2/ok.svg" alt="" class="chip-icon">
+                </button>
+                <button class="filter-chip" id="filterDistance">
+                    <span>Any distance</span>
+                    <img src="picture/pic/page2/ok.svg" alt="" class="chip-icon">
+                </button>
+                <button class="filter-chip" id="filterCategory">
+                    <span>Any category</span>
+                    <img src="picture/pic/page2/ok.svg" alt="" class="chip-icon">
+                </button>
+            </div>
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
+            <div class="dropdown-container" id="dropdownContainer"></div>
 
-.logo {
-    height: 34px;
-    display: block;
-}
+            <div class="main-layout">
+                <div class="events-column">
+                    <div id="eventsContainer"></div>
+                </div>
 
-.search-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #bcbcbc;
-    border-radius: 8px;
-    height: 42px;
-    background-color: #ffffff;
-}
+                <aside class="map-column">
+                    <p class="map-label">Find events near</p>
+                    <p class="map-city">New York, NY</p>
+                    <div class="map-container">
+                        <img src="picture/pic/page2/map-thumbnail.png.jpg" alt="map" class="map-img">
+                        <button class="map-btn">
+                            Browse in map
+                            <img src="picture/pic/page2/map.svg" alt="" class="map-arrow">
+                        </button>
+                        <div class="map-close">
+                            <span class="map-close-icon">✕</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
 
-.search-input-wrapper {
-    display: flex;
-    align-items: center;
-    padding-left: 12px;
-    border-right: 1px solid #bcbcbc;
-    height: 100%;
-    width: 300px;
-}
+        </div>
+    </main>
 
-.search-icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-}
+    <div id="mesto-dlya-futera"></div>
 
-.search-input-wrapper input {
-    border: none;
-    outline: none;
-    font-size: 14px;
-    width: 100%;
-}
-
-.location-input-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    height: 100%;
-    width: 294px;
-}
-
-.location-input-wrapper input {
-    border: none;
-    outline: none;
-    font-size: 14px;
-    width: 100%;
-}
-
-.search-btn {
-    background-color: #f65858;
-    border: none;
-    height: 42px;
-    width: 42px;
-    border-radius: 0 8px 8px 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lupa-v-knopke {
-    width: 16px;
-    height: 16px;
-    filter: brightness(0) invert(1);
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.language-select {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-}
-
-.btn-login {
-    color: #212121;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.btn-signup {
-    background-color: #00798a;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 8px;
-}
-
-/* HERO */
-.hero {
-    background-color: #ffffff;
-    padding: 71px 0 0 0;
-}
-
-.hero-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 54px;
-}
-
-.hero-info {
-    max-width: 512px;
-}
-
-.hero-title {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 52px;
-    color: #212121;
-    margin-bottom: 24px;
-}
-
-.hero-text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #212121;
-    margin-bottom: 24px;
-}
-
-.hero-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 125px;
-    height: 40px;
-    background-color: #00798a;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.hero-media {
-    flex-shrink: 0;
-    width: 540px;
-}
-
-.hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* EVENTS NEAR */
-.events {
-    background-color: #ffffff;
-    padding-top: 130px;
-    padding-bottom: 40px;
-}
-
-.events-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 28px;
-}
-
-.events-main-title {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 36px;
-    color: #212121;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.events-location-wrapper {
-    display: inline-flex;
-    align-items: center;
-    width: 240px;
-    height: 44px;
-    background-color: rgba(0, 121, 138, 0.12);
-    border-radius: 8px;
-    padding: 8px 10px 8px 12px;
-    position: relative;
-}
-
-.events-location {
-    color: #00798a;
-    font-size: 20px;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-.event-icon-pencil {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 10px;
-}
-
-.events-see-all {
-    font-size: 16px;
-    font-weight: 500;
-    color: #00798a;
-    text-decoration: none;
-}
-
-.events-near-grid,
-.online-events-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 36px;
-    row-gap: 36px;
-    width: 100%;
-}
-
-/* EVENT CARD */
-.event-card {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    background-color: #ffffff;
-}
-
-.event-card-media {
-    position: relative;
-    width: 100%;
-    height: 153px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
-
-.event-card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.event-card:hover .event-card-img {
-    transform: scale(1.03);
-}
-
-.event-card-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.event-card-title {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 26px;
-    color: #212121;
-    margin-bottom: 8px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-.event-card-category {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #707070;
-    margin-bottom: 8px;
-}
-
-.event-card-date-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.event-icon-meta {
-    width: 16px;
-    height: 16px;
-    margin-right: 6px;
-    flex-shrink: 0;
-}
-
-.event-card-date {
-    font-size: 14px;
-    font-weight: 400;
-    color: #212121;
-    text-transform: uppercase;
-}
-
-.event-card-meta-box {
-    display: flex;
-    flex-direction: row;
-}
-
-.event-meta-row {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 400;
-    color: #212121;
-}
-
-.event-meta-row:first-child {
-    margin-right: 16px;
-}
-
-/* UPCOMING ONLINE EVENTS */
-.upcoming-events {
-    background-color: #ffffff;
-    padding-top: 40px;
-    padding-bottom: 80px;
-}
-
-.upcoming-events .events-header {
-    margin-bottom: 24px;
-}
-
-.online-badge {
-    position: absolute;
-    top: 10px;
-    left: 12px;
-    width: 105px;
-    height: 20px;
-    background-color: #ffffff;
-    color: #707070;
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 8px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-}
-
-.online-badge::before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23707070'%3E%3Cpath d='M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l5 5v-11l-5 5z'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* JOIN MEETUP */
-.join-meetup {
-    background-color: rgba(151, 202, 209, 0.08);
-    padding: 36px 0;
-    margin: 60px 0;
-    border-radius: 8px;
-}
-
-.join-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-}
-
-.join-content {
-    max-width: 739px;
-}
-
-.join-title {
-    font-size: 28px;
-    font-weight: 600;
-    color: #212121;
-    margin-bottom: 16px;
-}
-
-.join-text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #212121;
-    max-width: 665px;
-    margin-bottom: 16px;
-}
-
-.join-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 192px;
-    height: 40px;
-    background-color: #e32359;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.join-img {
-    width: 236px;
-    height: auto;
-    flex-shrink: 0;
-    object-fit: contain;
-}
+    <script src="scripts/data.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/page2.js"></script>
+</body>
+</html>
