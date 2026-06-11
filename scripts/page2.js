@@ -2,76 +2,82 @@ document.addEventListener("DOMContentLoaded", () => {
     const eventsContainer = document.getElementById('eventsContainer');
     const dropdownContainer = document.getElementById('dropdownContainer');
 
-    // Находим кнопки всех 4 фильтров из ТЗ
-    const filterDate = document.getElementById('filterDate');
-    const filterType = document.getElementById('filterType');
-    const filterDistance = document.getElementById('filterDistance');
-    const filterCategory = document.getElementById('filterCategory');
+    // кнопки фильтров из html
+    const filterButtons = {
+        date: document.getElementById('filterDate'),
+        type: document.getElementById('filterType'),
+        distance: document.getElementById('filterDistance'),
+        category: document.getElementById('filterCategory')
+    };
 
-    let activeFilter = null;
+    let activeFilterType = null;
     
-    // Переменные для хранения выбранных фильтров
-    let selectedDate = null;
-    let selectedType = null;
-    let selectedDistance = null;
-    let selectedCategory = null;
+    // объект для хранения текущих выбранных фильтров
+    const currentFilters = {
+        date: null,
+        type: null,
+        distance: null,
+        category: null
+    };
 
-    // Опции для выпадающих списков, взятые прямо из текста ТЗ
-    const dateOptions = [
-        { label: 'Mar 13', value: 13 },
-        { label: 'Mar 14', value: 14 },
-        { label: 'Mar 16', value: 16 },
-        { label: 'Mar 23', value: 23 }
-    ];
+    // списки опций строго по тз
+    const optionsData = {
+        date: [
+            { label: 'Mar 13', value: 13 },
+            { label: 'Mar 14', value: 14 },
+            { label: 'Mar 16', value: 16 },
+            { label: 'Mar 23', value: 23 }
+        ],
+        type: [
+            { label: 'Online', value: 'online' },
+            { label: 'Offline', value: 'offline' }
+        ],
+        distance: [
+            { label: '5 km', value: 5 },
+            { label: '10 km', value: 10 },
+            { label: '15 km', value: 15 },
+            { label: '25 km', value: 25 },
+            { label: '50 km', value: 50 },
+            { label: '75 km', value: 75 },
+            { label: '100 km', value: 100 }
+        ],
+        category: [
+            { label: 'Social Activities', value: 'Social Activities' },
+            { label: 'Hobbies and Passions', value: 'Hobbies and Passions' },
+            { label: 'Health and Wellbeing', value: 'Health and Wellbeing' },
+            { label: 'Business', value: 'Business' },
+            { label: 'Technology', value: 'Technology' }
+        ]
+    };
 
-    const typeOptions = [
-        { label: 'Online', value: 'online' },
-        { label: 'Offline', value: 'offline' },
-    ];
+    // дефолтные тексты на кнопках
+    const defaultLabels = {
+        date: 'Any day',
+        type: 'Any type',
+        distance: 'Any distance',
+        category: 'Any category'
+    };
 
-    const distanceOptions = [
-        { label: '5 km', value: 5 },
-        { label: '10 km', value: 10 },
-        { label: '15 km', value: 15 },
-        { label: '25 km', value: 25 },
-        { label: '50 km', value: 50 },
-        { label: '75 km', value: 75 },
-        { label: '100 km', value: 100 },
-    ];
-
-    const categoryOptions = [
-        { label: 'Social Activities', value: 'Social Activities' },
-        { label: 'Hobbies and Passions', value: 'Hobbies and Passions' },
-        { label: 'Health and Wellbeing', value: 'Health and Wellbeing' },
-        { label: 'Business', value: 'Business' },
-        { label: 'Technology', value: 'Technology' },
-    ];
-
-    // Форматирование даты под требования ТЗ (например: Wed, Mar 13 · 11:00 AM)
+    // надежное форматирование даты через встроенный intl (выведет например: "Wed, Mar 13 · 11:00 AM")
     function formatDate(date) {
-        const months = ['Mar', 'Apr', 'May']; // Для наших моков достаточно марта
-        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        
-        const dayName = days[date.getDay()];
-        const monthName = 'Mar'; // В моках везде март (индекс 2)
-        const dayNum = date.getDate();
+        const dateOptions = { weekday: 'short', month: 'short', day: 'numeric' };
+        const datePart = date.toLocaleDateString('en-US', dateOptions);
         
         let hours = date.getHours();
-        const minutes = date.getMinutes();
+        const minutes = String(date.getMinutes()).padStart(2, '0');
         const ampm = hours >= 12 ? 'PM' : 'AM';
         hours = hours % 12 || 12;
-        const min = minutes < 10 ? '0' + minutes : minutes;
         
-        return `${dayName}, ${monthName} ${dayNum} · ${hours}:${min} ${ampm}`;
+        return `${datePart} · ${hours}:${minutes} ${ampm}`;
     }
 
-    // Отрисовка карточек
+    // функция отрисовки карточек мероприятий
     function renderEvents(events) {
         if (!eventsContainer) return;
         eventsContainer.innerHTML = '';
 
         if (events.length === 0) {
-            eventsContainer.innerHTML = '<p class="no-results">No events found for selected filters.</p>';
+            eventsContainer.innerHTML = '<p class="no-results">No events found matching your criteria.</p>';
             return;
         }
 
@@ -89,9 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="p2-event-card-info">
                     <p class="p2-card-row1">${formatDate(event.date)}</p>
                     <h3 class="p2-card-row2">${event.title}</h3>
-                    <p class="p2-card-row3">${event.category}${!isOnline && event.distance ? ' (' + event.distance + ' km)' : ''}</p>
+                    <p class="p2-card-row3">
+                        ${event.category} ${!isOnline && event.distance ? `(${event.distance} km)` : ''}
+                    </p>
                     <div class="p2-card-row4">
-                        ${event.attendees ? '<span>' + event.attendees + ' attendees</span>' : ''}
+                        ${event.attendees ? `<span>${event.attendees} attendees</span>` : '<span>0 attendees</span>'}
                     </div>
                 </div>
             `;
@@ -99,25 +107,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Логика фильтрации
+    // корректная последовательная фильтрация по всем параметрам
     function filterEvents() {
         let filtered = [...eventsStore];
 
-        if (selectedDate) {
-            filtered = filtered.filter(event => event.date.getDate() === selectedDate);
+        if (currentFilters.date) {
+            filtered = filtered.filter(event => event.date.getDate() === currentFilters.date);
         }
 
-        if (selectedType) {
-            filtered = filtered.filter(event => event.type === selectedType);
+        if (currentFilters.type) {
+            filtered = filtered.filter(event => event.type === currentFilters.type);
         }
 
-        if (selectedDistance) {
-            // Дистанция проверяется только у offline-событий
-            filtered = filtered.filter(event => event.type === 'offline' ? event.distance <= selectedDistance : true);
+        // если выбрана дистанция, автоматически отсекаем онлайн и проверяем километраж офлайна
+        if (currentFilters.distance) {
+            filtered = filtered.filter(event => event.type === 'offline' && event.distance <= currentFilters.distance);
         }
 
-        if (selectedCategory) {
-            filtered = filtered.filter(event => event.category === selectedCategory);
+        if (currentFilters.category) {
+            filtered = filtered.filter(event => event.category === currentFilters.category);
         }
 
         renderEvents(filtered);
@@ -125,42 +133,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeDropdown() {
         dropdownContainer.innerHTML = '';
-        activeFilter = null;
+        activeFilterType = null;
         document.querySelectorAll('.filter-chip').forEach(btn => btn.classList.remove('active'));
     }
 
-    // Открытие выпадающих списков под кнопками
-    function openDropdown(type, options, currentValue, setter, buttonEl, defaultLabel) {
-        if (activeFilter === type) {
+    // универсальное управление выпадающими списками
+    function openDropdown(type) {
+        if (activeFilterType === type) {
             closeDropdown();
             return;
         }
 
         closeDropdown();
-        activeFilter = type;
-        buttonEl.classList.add('active');
+        activeFilterType = type;
+        
+        const buttonEl = filterButtons[type];
+        if (buttonEl) buttonEl.classList.add('active');
 
         const dropdown = document.createElement('div');
         dropdown.className = 'dropdown open';
 
+        // опция сброса фильтра ("Any ...")
         const clearOption = document.createElement('div');
         clearOption.className = 'dropdown-option';
         clearOption.textContent = 'Any ' + type;
         clearOption.addEventListener('click', () => {
-            setter(null);
-            buttonEl.querySelector('span').textContent = defaultLabel;
+            currentFilters[type] = null;
+            buttonEl.querySelector('span').textContent = defaultLabels[type];
             closeDropdown();
             filterEvents();
         });
         dropdown.appendChild(clearOption);
 
-        options.forEach(opt => {
+        // генерация пунктов списка на основе мок-данных из тз
+        optionsData[type].forEach(opt => {
             const el = document.createElement('div');
-            el.className = 'dropdown-option' + (currentValue === opt.value ? ' selected' : '');
+            el.className = 'dropdown-option' + (currentFilters[type] === opt.value ? ' selected' : '');
             el.textContent = opt.label;
             el.addEventListener('click', () => {
-                setter(opt.value);
-                buttonEl.querySelector('span').textContent = opt.label; // Меняем текст кнопки на выбранный
+                currentFilters[type] = opt.value;
+                buttonEl.querySelector('span').textContent = opt.label;
                 closeDropdown();
                 filterEvents();
             });
@@ -170,28 +182,20 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdownContainer.appendChild(dropdown);
     }
 
-    // Подключаем клики ко всем 4 кнопкам
-    filterDate.addEventListener('click', () => {
-        openDropdown('date', dateOptions, selectedDate, (v) => { selectedDate = v; }, filterDate, 'Any day');
+    // привязка кликов к кнопкам фильтрации динамически в цикле
+    Object.keys(filterButtons).forEach(type => {
+        if (filterButtons[type]) {
+            filterButtons[type].addEventListener('click', () => openDropdown(type));
+        }
     });
 
-    filterType.addEventListener('click', () => {
-        openDropdown('type', typeOptions, selectedType, (v) => { selectedType = v; }, filterType, 'Any type');
-    });
-
-    filterDistance.addEventListener('click', () => {
-        openDropdown('distance', distanceOptions, selectedDistance, (v) => { selectedDistance = v; }, filterDistance, 'Any distance');
-    });
-
-    filterCategory.addEventListener('click', () => {
-        openDropdown('category', categoryOptions, selectedCategory, (v) => { selectedCategory = v; }, filterCategory, 'Any category');
-    });
-
+    // закрытие выпадающего окна при клике в любое другое место экрана
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.filter-chip') && !e.target.closest('.dropdown')) {
             closeDropdown();
         }
     });
 
+    // стартовый рендер всех карточек при загрузке страницы
     renderEvents(eventsStore);
 });
