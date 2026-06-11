@@ -1081,7 +1081,7 @@ body {
         gap: 12px;
     }
 
-    /* PAGE 2 */
+    
     .page-main-title {
         margin-top: 32px;
         font-size: 24px;
@@ -1111,22 +1111,5 @@ body {
         font-size: 13px;
     }
 
-    .page-main-title {
-    margin-top: 24px !important;
-    margin-bottom: 8px !important;
-}
-
-.page-subtitle {
-    margin-bottom: 4px !important;
-}
-
-.blue-line {
-    margin-bottom: 16px !important;
-}
-
-.filters-row {
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 16px !important;
-}
+    
 }

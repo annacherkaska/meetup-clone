@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const eventsContainer = document.getElementById('eventsContainer');
     const dropdownContainer = document.getElementById('dropdownContainer');
 
-    // кнопки фильтров из html
+    
     const filterButtons = {
         date: document.getElementById('filterDate'),
         type: document.getElementById('filterType'),
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let activeFilterType = null;
     
-    // объект для хранения текущих выбранных фильтров
+    
     const currentFilters = {
         date: null,
         type: null,
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         category: null
     };
 
-    // списки опций строго по тз
+    
     const optionsData = {
         date: [
             { label: 'Mar 13', value: 13 },
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
-    // дефолтные тексты на кнопках
+    
     const defaultLabels = {
         date: 'Any day',
         type: 'Any type',
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         category: 'Any category'
     };
 
-    // надежное форматирование даты через встроенный intl (выведет например: "Wed, Mar 13 · 11:00 AM")
+    
     function formatDate(date) {
         const dateOptions = { weekday: 'short', month: 'short', day: 'numeric' };
         const datePart = date.toLocaleDateString('en-US', dateOptions);
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return `${datePart} · ${hours}:${minutes} ${ampm}`;
     }
 
-    // функция отрисовки карточек мероприятий
+    
     function renderEvents(events) {
         if (!eventsContainer) return;
         eventsContainer.innerHTML = '';
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // корректная последовательная фильтрация по всем параметрам
+    
     function filterEvents() {
         let filtered = [...eventsStore];
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             filtered = filtered.filter(event => event.type === currentFilters.type);
         }
 
-        // если выбрана дистанция, автоматически отсекаем онлайн и проверяем километраж офлайна
+        
         if (currentFilters.distance) {
             filtered = filtered.filter(event => event.type === 'offline' && event.distance <= currentFilters.distance);
         }
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('.filter-chip').forEach(btn => btn.classList.remove('active'));
     }
 
-    // универсальное управление выпадающими списками
+    
     function openDropdown(type) {
         if (activeFilterType === type) {
             closeDropdown();
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const dropdown = document.createElement('div');
         dropdown.className = 'dropdown open';
 
-        // опция сброса фильтра ("Any ...")
+      
         const clearOption = document.createElement('div');
         clearOption.className = 'dropdown-option';
         clearOption.textContent = 'Any ' + type;
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         dropdown.appendChild(clearOption);
 
-        // генерация пунктов списка на основе мок-данных из тз
+        
         optionsData[type].forEach(opt => {
             const el = document.createElement('div');
             el.className = 'dropdown-option' + (currentFilters[type] === opt.value ? ' selected' : '');
@@ -182,20 +182,20 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdownContainer.appendChild(dropdown);
     }
 
-    // привязка кликов к кнопкам фильтрации динамически в цикле
+    
     Object.keys(filterButtons).forEach(type => {
         if (filterButtons[type]) {
             filterButtons[type].addEventListener('click', () => openDropdown(type));
         }
     });
 
-    // закрытие выпадающего окна при клике в любое другое место экрана
+    
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.filter-chip') && !e.target.closest('.dropdown')) {
             closeDropdown();
         }
     });
 
-    // стартовый рендер всех карточек при загрузке страницы
+    
     renderEvents(eventsStore);
 });
